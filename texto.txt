@@ -1,1 +1,196 @@
-olá
+Microsoft Windows [versão 10.0.19045.3324]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\202307164534>./Documents
+'.' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.
+
+C:\Users\202307164534>cd ./Documents
+
+C:\Users\202307164534\Documents>git clone https://github.com/Mnzss1133/git2
+Cloning into 'git2'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+C:\Users\202307164534\Documents>cd git2
+
+C:\Users\202307164534\Documents\git2>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+C:\Users\202307164534\Documents\git2>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        texto.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\202307164534\Documents\git2>git add .
+
+C:\Users\202307164534\Documents\git2>git commit -m "texto"
+[main 10e8bf0] texto
+ Committer: JOAO PEDRO PASSOS RIBEIRO DE MENEZES <202307164534@alunos.ibmec.edu.br>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 texto.txt
+
+C:\Users\202307164534\Documents\git2>git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 20 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mnzss1133/git2
+   bd9e4e6..10e8bf0  main -> main
+
+C:\Users\202307164534\Documents\git2>git branch
+* main
+
+C:\Users\202307164534\Documents\git2>git k
+git: 'k' is not a git command. See 'git --help'.
+
+The most similar commands are
+        am
+        fsck
+        gc
+        mv
+        p4
+        rm
+
+C:\Users\202307164534\Documents\git2>gitk
+
+C:\Users\202307164534\Documents\git2>git branch-m master
+git: 'branch-m' is not a git command. See 'git --help'.
+
+C:\Users\202307164534\Documents\git2>git branch -m master
+
+C:\Users\202307164534\Documents\git2>git branch
+* master
+
+C:\Users\202307164534\Documents\git2>git branch -m main
+
+C:\Users\202307164534\Documents\git2>git branch
+* main
+
+C:\Users\202307164534\Documents\git2>git branch featureA
+
+C:\Users\202307164534\Documents\git2>git branch
+  featureA
+* main
+
+C:\Users\202307164534\Documents\git2>git checkout featureA
+Switched to branch 'featureA'
+
+C:\Users\202307164534\Documents\git2>git checkout -b featureB
+Switched to a new branch 'featureB'
+
+C:\Users\202307164534\Documents\git2>git branch
+  featureA
+* featureB
+  main
+
+C:\Users\202307164534\Documents\git2>git checkout featureA
+Switched to branch 'featureA'
+
+C:\Users\202307164534\Documents\git2>git brach -d featureB
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+C:\Users\202307164534\Documents\git2>git branch -d featureA
+error: Cannot delete branch 'featureA' checked out at 'C:/Users/202307164534/Documents/git2'
+
+C:\Users\202307164534\Documents\git2>git branch -d featureB
+Deleted branch featureB (was 10e8bf0).
+
+C:\Users\202307164534\Documents\git2>git status
+On branch featureA
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   texto.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\202307164534\Documents\git2>git add .
+
+C:\Users\202307164534\Documents\git2>git commit - m "anotações"
+error: pathspec '-' did not match any file(s) known to git
+error: pathspec 'm' did not match any file(s) known to git
+error: pathspec 'anotações' did not match any file(s) known to git
+
+C:\Users\202307164534\Documents\git2>git push
+fatal: The current branch featureA has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin featureA
+
+
+C:\Users\202307164534\Documents\git2>git checkout main
+Switched to branch 'main'
+M       texto.txt
+Your branch is up to date with 'origin/main'.
+
+C:\Users\202307164534\Documents\git2>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   texto.txt
+
+
+C:\Users\202307164534\Documents\git2>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   texto.txt
+
+
+C:\Users\202307164534\Documents\git2>gitl
+'gitl' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.
+
+C:\Users\202307164534\Documents\git2>gitk
+
+C:\Users\202307164534\Documents\git2> git checkout -b hotfix
+Switched to a new branch 'hotfix'
+
+C:\Users\202307164534\Documents\git2>git branch -d hotfix
+error: Cannot delete branch 'hotfix' checked out at 'C:/Users/202307164534/Documents/git2'
+
+C:\Users\202307164534\Documents\git2>git checkout main
+Switched to branch 'main'
+M       texto.txt
+Your branch is up to date with 'origin/main'.
+
+C:\Users\202307164534\Documents\git2>git branch -d hotfix
+Deleted branch hotfix (was 10e8bf0).
+
+C:\Users\202307164534\Documents\git2>git checkout featureA
+Switched to branch 'featureA'
+M       texto.txt
+
+C:\Users\202307164534\Documents\git2>a
